@@ -1,0 +1,4 @@
+App\Entity\Service:
+  service_{1..3}:
+    name: service_<word()>_<randomNumber(6)>
+    price: <randomNumber(3)>

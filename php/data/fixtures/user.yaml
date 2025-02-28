@@ -1,0 +1,4 @@
+App\Entity\User:
+  user_{1..1}:
+    password: \$2y\$13\$fkD4Q1iJtW8nmJcCF4H3fuBIIiiMHAXqS4Mb0WxbDJLQ6ZKBXiTSm
+    email: <email()>
