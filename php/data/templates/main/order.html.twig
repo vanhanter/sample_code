@@ -3,11 +3,22 @@
 {% block title %}Заказать услугу{% endblock %}
 
 {% block body %}
+
+    {# Показываем всплывающее сообщение (flash messages) #}
+    {% for label, messages in app.flashes %}
+        <div class="flash-{{ label }}">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    {# Отображаем форму заказа #}
     <h1>Заказать услугу</h1>
     {{ form_start(form) }}
-        {{ form_row(form.service) }}
-        <br/>
-        {{ form_row(form.user) }}
-        <br/>
+    {{ form_row(form.service) }}
+    <br/>
+    {{ form_row(form.user) }}
+    <br/>
     {{ form_end(form) }}
 {% endblock %}

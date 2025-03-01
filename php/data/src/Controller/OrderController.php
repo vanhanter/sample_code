@@ -48,6 +48,9 @@ final class OrderController extends AbstractController
             $entityManager->persist($order);
             $entityManager->flush();
 
+            // Добавляем flash-сообщение
+            $this->addFlash('success', 'Заказ создан');
+
             // Редирект на форму заказа
             return new RedirectResponse($request->getPathInfo());
         }
